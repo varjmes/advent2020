@@ -4,12 +4,12 @@
 
 const fs = require('fs')
 
-const entries = fs.readFileSync('input.txt').toString().split('\n').map(Number);
+const entries = fs.readFileSync('input.txt').toString().split('\n').map(Number)
 
 for (let i = 0; i <= entries.length - 1; i++) {
   for (let j = 0; j <= entries.length - 1; j++) {
       if (entries[i] + entries[j] === 2020) {
-        return entries[i] * entries[j];
+        return entries[i] * entries[j]
       }
   }
 }
