@@ -2,9 +2,8 @@
 // You don't need to identify the questions to which anyone answered "yes"; you
 // need to identify the questions to which everyone answered "yes"!
 
-const fs = require('fs')
-
-const answers = fs.readFileSync('input.txt').toString().split('\n\n').filter(entry => entry)
+const parseInput = require('../helpers/parseInput')
+const answers = parseInput('input.txt', '\n\n')
 
 const generateAlphabetObject = () => {
   const obj = {}

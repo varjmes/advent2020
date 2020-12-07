@@ -7,9 +7,9 @@
 // Starting at the top-left corner of your map and following a slope of right 3
 // and down 1, how many trees would you encounter?
 
-const fs = require('fs')
+const parseInput = require('../helpers/parseInput')
 
-const lines = fs.readFileSync('input.txt').toString().split('\n').filter(line => line)
+const lines = parseInput('input.txt', '\n')
 const height = lines.length;
 const width = lines[0].length;
 let treeCount = 0;

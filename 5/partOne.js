@@ -22,9 +22,8 @@
 
 // What is the highest seat ID on a boarding pass?
 
-const fs = require('fs')
-
-const boardingPasses = fs.readFileSync('input.txt').toString().split('\n').filter(entry => entry)
+const parseInput = require('../helpers/parseInput')
+const boardingPasses = parseInput('input.txt', '\n')
 
 const getPosition = (identifiers, start, end) => {
   let lower = start

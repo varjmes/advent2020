@@ -9,9 +9,8 @@
 // For each group, count the number of questions to which anyone answered "yes".
 // What is the sum of those counts?
 
-const fs = require('fs')
-
-const answers = fs.readFileSync('input.txt').toString().split('\n\n').filter(entry => entry)
+const parseInput = require('../helpers/parseInput')
+const answers = parseInput('input.txt', '\n\n')
 
 const generateAlphabetObject = () => {
   const obj = {}

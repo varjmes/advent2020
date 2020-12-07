@@ -1,9 +1,10 @@
-// --- Day 7: Handy Haversacks ---
+// --- Part Two ---
 
-const fs = require('fs')
+// How many individual bags are required inside your single shiny gold bag?
 
-const rules = fs.readFileSync('input.txt').toString().split('\n').filter(entry => entry)
+const parseInput = require('../helpers/parseInput')
 
+const rules = parseInput('input.txt', '\n')
 const rulesObj = {}
 
 for (let rule of rules) {

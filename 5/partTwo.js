@@ -8,9 +8,8 @@
 // -1 from yours will be in your list.
 // What is the ID of your seat?
 
-const fs = require('fs')
-
-const boardingPasses = fs.readFileSync('input.txt').toString().split('\n').filter(entry => entry)
+const parseInput = require('../helpers/parseInput')
+const boardingPasses = parseInput('input.txt', '\n')
 
 const getPosition = (identifiers, start, end) => {
   let lower = start

@@ -1,12 +1,10 @@
 // --- Part Two ---
 // Determine the number of trees you would encounter if, for each of the following slopes, you start at the top-left corner and traverse the map all the way to the bottom:
 
-const fs = require('fs')
+const parseInput = require('../helpers/parseInput')
 
-const lines = fs.readFileSync('input.txt').toString().split('\n').filter(line => line)
-
+const lines = parseInput('input.txt', '\n')
 const slopes = [[1, 1], [3, 1], [5, 1], [7, 1], [1, 2]]
-
 const height = lines.length
 const width = lines[0].length
 

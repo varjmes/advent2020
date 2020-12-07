@@ -11,10 +11,9 @@
 
 // How many bag colors can eventually contain at least one shiny gold bag?
 
-const fs = require('fs')
+const parseInput = require('../helpers/parseInput')
 
-const rules = fs.readFileSync('input.txt').toString().split('\n').filter(entry => entry)
-
+const rules = parseInput('input.txt', '\n')
 const rulesObj = {}
 
 for (let rule of rules) {

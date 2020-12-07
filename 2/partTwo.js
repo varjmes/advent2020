@@ -7,9 +7,8 @@
 
 // How many passwords are valid according to the new interpretation of the policies?
 
-const fs = require('fs')
-
-const entries = fs.readFileSync('input.txt').toString().split('\n').filter(entry => entry)
+const parseInput = require('../helpers/parseInput')
+const entries = parseInput('input.txt', '\n')
 
 const validPasswords = entries.filter(entry => {
   const [frequency, lettering, password] = entry.split(' ')
